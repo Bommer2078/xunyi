@@ -7,5 +7,29 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "寻忆空间",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/classic/classic",
+        "text":"流行",
+        "iconPath":"images/classic.png",
+        "selectedIconPath":"images/classic@highlight.png"
+      },{
+        "pagePath":"pages/classic/classic",
+        "text":"书单",
+        "iconPath":"images/book.png",
+        "selectedIconPath":"images/book@highlight.png"
+      },{
+        "pagePath":"pages/classic/classic",
+        "text":"喜欢",
+        "iconPath":"images/my.png",
+        "selectedIconPath":"images/my@highlight.png"
+      }
+    ],
+    "borderStyle":"white",
+    "backgroundColor":"#fff",
+    "color":"#c7c7c7",
+    "selectedColor":"#000"
   }
 }

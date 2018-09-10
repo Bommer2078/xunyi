@@ -1,2 +1,12 @@
 <!--pages/classic/classic.wxml-->
-<text>pages/classic/classic.wxml</text>
+<view class="header">
+    <epsoide-cmp class="epsoide" movieIndex="{{movieIndex}}" />
+    <like-cmp
+            count="{{count}}"
+            isLike="{{isLike}}"
+            class="like"
+            bind:like="like"
+    />
+</view>
+<movie-cmp movieImg="{{movieImg}}" movieContent="{{movieContent}}" />
+<navi-cmp class="navi"/>

@@ -1,0 +1,6 @@
+<!--components/navigation/index.wxml-->
+<view class="container">
+    <image class="pre-btn" src="images/上一个@2x.png" />
+    <text>电影名称</text>
+    <image class="next-btn" src="images/下一个@2x.png" />
+</view>

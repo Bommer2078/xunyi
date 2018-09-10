@@ -1,66 +1,45 @@
-// pages/classic/classic.js
+import {Http} from '../../utils/http'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+      count:0,
+      isLike:false,
+      movieImg:'',
+      movieContent:'',
+      movieIndex:0,
+      movieId:'',
+      classicType:''
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+     let http = new Http()
+      http.request({
+          url:'/classic/latest',
+          success:(res) => {
+              console.log(res)
+              this.setData({
+                  count:res.fav_nums,
+                  isLike:res.like_status,
+                  movieImg:res.image,
+                  movieContent:res.content,
+                  movieIndex:res.index,
+                  movieId:res.id,
+                  classicType:res.type
+              })
+          }
+      })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  like(data){
+      let http = new Http()
+      let isLike = data.detail.isLike
+      let url = isLike?'/like':'/like/cancel'
+      http.request({
+          url,
+          method:'POST',
+          data:{
+              art_id:this.data.movieId,
+              type:this.data.classicType
+          }
+      })
   }
 })

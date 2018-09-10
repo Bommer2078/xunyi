@@ -1,0 +1,23 @@
+/* components/navigation/index.wxss */
+
+.container{
+    display: flex;
+    width:500rpx;
+    margin:0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:25rpx;
+    background: #f7f7f7;
+}
+
+.container text{
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.container image{
+    width: 23rpx;
+    height: 34rpx;
+}
+
