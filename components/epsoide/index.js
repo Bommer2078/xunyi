@@ -1,11 +1,11 @@
 // components/epsoide/index.js
 Component({
   properties: {
-      movieIndex:{
+      classicIndex:{
           type:String,
           value:'0',
           observer:function(){
-              let index = this.properties.movieIndex
+              let index = this.properties.classicIndex
               index = index<10?'0'+index:index
               this.setData({
                   index

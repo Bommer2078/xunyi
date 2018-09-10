@@ -1,4 +1,4 @@
-<!--components/classic/movie/index.wxml-->
+<!--components/classic/essay/index.wxml-->
 <view class="container">
     <image src="{{classicImg}}" class="main-img" />
     <image src="{{imgUrl}}" class="text-img" />

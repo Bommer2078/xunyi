@@ -1,0 +1,10 @@
+<!--components/classic/music/index.wxml-->
+<view class="container">
+    <view class="main">
+        <view class="circle">
+            <view class="play"></view>
+        </view>
+    </view>
+    <image src="{{imgUrl}}" class="text-img" />
+    <text>{{classicContent}}</text>
+</view>

@@ -3,12 +3,16 @@ Page({
   data: {
       count:0,
       isLike:false,
-      movieImg:'',
-      movieContent:'',
-      movieIndex:0,
-      movieId:'',
-      classicType:''
+      classicImg:'',
+      classicContent:'',
+      classicIndex:0,
+      classicId:'',
+      classicType:'',
+      classicTitle:'',
+      currIndex:2,
+      lastIndex:2
   },
+
 
   onLoad: function (options) {
      let http = new Http()
@@ -19,11 +23,14 @@ Page({
               this.setData({
                   count:res.fav_nums,
                   isLike:res.like_status,
-                  movieImg:res.image,
-                  movieContent:res.content,
-                  movieIndex:res.index,
-                  movieId:res.id,
-                  classicType:res.type
+                  classicImg:res.image,
+                  classicContent:res.content,
+                  classicIndex:res.index,
+                  classicId:res.id,
+                  classicType:res.type,
+                  classicTitle:res.title,
+                  currIndex:res.index,
+                  lastIndex:res.index
               })
           }
       })
@@ -37,7 +44,7 @@ Page({
           url,
           method:'POST',
           data:{
-              art_id:this.data.movieId,
+              art_id:this.data.classicId,
               type:this.data.classicType
           }
       })
