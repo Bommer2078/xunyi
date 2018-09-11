@@ -1,5 +1,6 @@
 // components/navigation/index.js
 import {Http} from '../../utils/http'
+import {setStorage,getStorage} from '../../utils/setStorage'
 Component({
   /**
    * 组件的属性列表
@@ -18,6 +19,9 @@ Component({
               this.isForbid()
           }
       },
+      classicType:{
+          type:String
+      }
   },
 
   /**
@@ -33,26 +37,33 @@ Component({
 
   methods: {
       nextClick(){
-          let currIndex = this.properties.currIndex
-          let lastIndex = this.properties.lastIndex
-          if(currIndex === lastIndex){
-              return
-          }
-          this.getRequest('next')
-          this.setData({
-              currIndex:++currIndex
-          })
+          this._handleClick('next')
       },
       preClick(){
+          this._handleClick('pre')
+      },
+
+      // 封装向前和向后的点击函数
+      _handleClick(type){
           let currIndex = this.properties.currIndex
-          if(currIndex === 1){
+          let lastIndex = this.properties.lastIndex
+
+          if(type==='next'&&currIndex === lastIndex){
               return
           }
-          this.getRequest('pre')
-          this.setData({
-              currIndex:--currIndex
-          })
+          if(type==='pre'&&currIndex === 1){
+              return
+          }
+
+          let isStorage = getStorage(currIndex + temp)
+          let temp = type=='next'?1:-1
+          if(!isStorage){
+              this.getRequest(type)
+          }else{
+              this._updateToClassic(isStorage)
+          }
       },
+
       // 请求数据前一期或下一期的数据
       getRequest(attr){
           let url
@@ -61,19 +72,24 @@ Component({
           switch (attr){
               case 'next':
                   url = '/classic/' + currIndex + '/next'
-                  console.log(url)
                   break
               case 'pre':
                   url ='/classic/' + currIndex + '/previous'
-                  console.log(url)
                   break
           }
           http.request({
               url,
-              success(data){
-                  console.log(data)
+              success:(data)=>{
+                 this._updateToClassic(data)
+                  setStorage(data.index,data)
               }
           })
+      },
+      // 向父组件传值
+      _updateToClassic(data){
+              this.triggerEvent('pushBtn',{
+                  classicData:data
+              },{})
       },
 // 禁止按钮
       isForbid(){

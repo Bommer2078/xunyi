@@ -1,6 +1,6 @@
 <!--pages/classic/classic.wxml-->
 <view class="header">
-    <epsoide-cmp class="epsoide" classicIndex="{{classicIndex}}" />
+    <epsoide-cmp class="epsoide" classicIndex="{{classic.index}}" />
     <like-cmp
             count="{{count}}"
             isLike="{{isLike}}"
@@ -8,10 +8,13 @@
             bind:like="like"
     />
 </view>
-<!--<movie-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />-->
-<music-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />
+<movie-cmp wx:if="{{classic.type===100}}" classicImg="{{classic.image}}" classicContent="{{classic.content}}" />
+<music-cmp wx:if="{{classic.type===200}}" classicImg="{{classic.image}}" classicContent="{{classic.content}}" musicSrc="{{classic.url}}" musicTitle="{{classic.title}}"/>
+<essay-cmp wx:if="{{classic.type===300}}" classicImg="{{classic.image}}" classicContent="{{classic.content}}" />
 <navi-cmp
-        classicTitle="{{classicTitle}}"
-        currIndex="{{currIndex}}"
+        classicTitle="{{classic.title}}"
+        currIndex="{{classic.index}}"
+        classicType="{{classic.type}}"
         lastIndex="{{lastIndex}}"
+        bind:pushBtn="pushBtn"
         class="navi"/>

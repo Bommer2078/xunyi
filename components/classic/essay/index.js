@@ -1,10 +1,9 @@
 // components/classic/essay/index.js
+import {classicBehavior} from "../commen-beh";
+
 Component({
-    properties: {
-        classicContent:String,
-        classicImg:String
-    },
+    behaviors:[classicBehavior],
     data: {
-        imgUrl:'images/诗句。@2x.png'
+        imgUrl:'images/诗句.png'
     }
 })
