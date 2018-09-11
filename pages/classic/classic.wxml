@@ -8,8 +8,8 @@
             bind:like="like"
     />
 </view>
-<movie-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />
-<!--<music-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />-->
+<!--<movie-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />-->
+<music-cmp classicImg="{{classicImg}}" classicContent="{{classicContent}}" />
 <navi-cmp
         classicTitle="{{classicTitle}}"
         currIndex="{{currIndex}}"

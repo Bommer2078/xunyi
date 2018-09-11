@@ -1,10 +1,13 @@
 <!--components/classic/music/index.wxml-->
 <view class="container">
     <view class="main">
-        <view class="circle">
-            <view class="play"></view>
-        </view>
+        <image class="circle" src="{{classicImg}}" />
+        <image class="play" src="{{pauseImg}}" />
     </view>
-    <image src="{{imgUrl}}" class="text-img" />
+    <image src="images/音乐。@2x.png" class="text-img" />
     <text>{{classicContent}}</text>
 </view>
+
+<!--style="background: url('images/矢量智能对象@2x.png') no-repeat center"-->
+
+<!--style="background: url('images/播放中.png')"-->
