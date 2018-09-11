@@ -19,7 +19,6 @@ Page({
       http.request({
           url:'/classic/latest',
           success:(res) => {
-              console.log(res)
               this.setData({
                   count:res.fav_nums,
                   isLike:res.like_status,
