@@ -1,0 +1,13 @@
+<!--components/books/index.wxml-->
+<view class="container">
+    <image src="{{}}" />
+    <view class="info-card">
+        <view class="book-info">
+            <text class="title">爱你就像爱生命</text>
+            <text class="auth">李银河</text>
+        </view>
+        <view class="info">
+            <text class="likes">233 喜欢 · 68 短评</text>
+        </view>
+    </view>
+</view>

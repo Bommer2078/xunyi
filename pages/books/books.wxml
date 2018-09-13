@@ -1,0 +1,15 @@
+<!--pages/books/books.wxml-->
+<view class="search">
+    <view class="search-bar">
+        <image src="../../images/search.png" />
+        <text>搜索图书名称</text>
+    </view>
+</view>
+<view class="books-container">
+    <image src="../../images/jingxuan.png" />
+    <view class="block">
+        <block>
+            <book-cmp class="book"/>
+        </block>
+    </view>
+</view>
