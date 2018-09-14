@@ -16,26 +16,27 @@ Page({
 
   getClassicData(){
       let http = new Http()
-      http.request({
+      let classic = http.request({
           url:'/classic/latest',
-          success:(res) => {
-              console.log(res)
-              this.setData({
-                  classic:res,
-                  lastIndex:res.index,
-                  count:res.fav_nums,
-                  isLike:res.like_status
-              })
-              setStorage(res.index,res)
-          }
       })
+      classic.then((res) => {
+          console.log(res)
+          this.setData({
+              classic:res,
+              lastIndex:res.index,
+              count:res.fav_nums,
+              isLike:res.like_status
+          })
+          setStorage(res.index,res)
+      },err=>console.log(err))
   },
 
+    // 子组件上传的数据
    like(data){
        let http = new Http()
        let isLike = data.detail.isLike
        let url = isLike?'/like':'/like/cancel'
-       http.request({
+       let promise = http.request({
            url,
            method:'POST',
            data:{
@@ -43,6 +44,7 @@ Page({
                type:this.data.classic.type
            }
        })
+
    },
 
     pushBtn(res){

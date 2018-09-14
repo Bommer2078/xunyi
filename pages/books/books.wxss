@@ -23,7 +23,7 @@
 .search-bar > image{
     width: 28rpx;
     height: 28rpx;
-    margin-left:10rpx;
+    margin-right:15rpx;
 }
 
 .books-container {
@@ -42,7 +42,7 @@
 .block{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .books-container .book{

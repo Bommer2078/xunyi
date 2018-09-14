@@ -24,11 +24,6 @@ Component({
       month:'一月'
   },
 
-
-  methods: {
-
-  },
-
   ready(){
       let date = new Date()
       let year = date.getFullYear()

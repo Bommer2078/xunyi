@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f240f9-0bb5-4e0b-895d-83f0201f04c6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/_http.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/book/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/book/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/book/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/components/book/index.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/book/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/components/book/index.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/epsoide/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/epsoide/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/book.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/book.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/likeModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/likeModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/books/books.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/books/books.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.wxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/books/books.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/books/books.wxss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/classic/classic.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/classic/classic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/http.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/http.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,52 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.json">
+      <file leaf-file-name="book.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/model/book.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/classic/classic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classic.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/classic/classic.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="20" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="books.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/books/books.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="105">
+              <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="books.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/books/books.js">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <folding>
+                <element signature="e#24#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="books.wxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/books/books.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            <state relative-caret-position="225">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -69,17 +62,8 @@
       <file leaf-file-name="books.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/books/books.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/book/index.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            <state relative-caret-position="210">
+              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -87,8 +71,26 @@
       <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/book/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="645">
+              <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/book/index.wxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="53" lean-forward="true" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/book/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -119,7 +121,6 @@
         <option value="$PROJECT_DIR$/component/like/index.wxml" />
         <option value="$PROJECT_DIR$/components/like/index.wxml" />
         <option value="$PROJECT_DIR$/config.js" />
-        <option value="$PROJECT_DIR$/utils/http.js" />
         <option value="H:/关于前端/工具库/barn.js" />
         <option value="$PROJECT_DIR$/components/like/index.wxss" />
         <option value="$PROJECT_DIR$/app.wxss" />
@@ -129,7 +130,6 @@
         <option value="$PROJECT_DIR$/pages/classic/classic.wxss" />
         <option value="$PROJECT_DIR$/components/classic/movie/index.wxml" />
         <option value="$PROJECT_DIR$/components/navigation/index.wxml" />
-        <option value="$PROJECT_DIR$/components/epsoide/index.js" />
         <option value="$PROJECT_DIR$/components/classic/essay/index.wxml" />
         <option value="$PROJECT_DIR$/components/classic/music/index.wxss" />
         <option value="$PROJECT_DIR$/components/classic/comment.wxss" />
@@ -141,17 +141,23 @@
         <option value="$PROJECT_DIR$/pages/classic/classic.json" />
         <option value="$PROJECT_DIR$/utils/setStorage.js" />
         <option value="$PROJECT_DIR$/components/like/index.js" />
-        <option value="$PROJECT_DIR$/model/likeModel.js" />
-        <option value="$PROJECT_DIR$/components/navigation/index.js" />
         <option value="$PROJECT_DIR$/pages/classic/classic.wxml" />
-        <option value="$PROJECT_DIR$/pages/classic/classic.js" />
         <option value="$PROJECT_DIR$/components/classic/music/index.wxml" />
         <option value="$PROJECT_DIR$/components/classic/music/index.js" />
         <option value="$PROJECT_DIR$/pages/books/books.json" />
-        <option value="$PROJECT_DIR$/components/book/index.wxml" />
-        <option value="$PROJECT_DIR$/pages/books/books.wxss" />
         <option value="$PROJECT_DIR$/app.json" />
+        <option value="$PROJECT_DIR$/utils/_http.js" />
+        <option value="$PROJECT_DIR$/utils/http.js" />
+        <option value="$PROJECT_DIR$/pages/classic/classic.js" />
+        <option value="$PROJECT_DIR$/components/navigation/index.js" />
+        <option value="$PROJECT_DIR$/model/likeModel.js" />
+        <option value="$PROJECT_DIR$/model/book.js" />
+        <option value="$PROJECT_DIR$/pages/books/books.js" />
+        <option value="$PROJECT_DIR$/components/book/index.wxml" />
+        <option value="$PROJECT_DIR$/components/epsoide/index.js" />
+        <option value="$PROJECT_DIR$/components/book/index.js" />
         <option value="$PROJECT_DIR$/components/book/index.wxss" />
+        <option value="$PROJECT_DIR$/pages/books/books.wxss" />
         <option value="$PROJECT_DIR$/pages/books/books.wxml" />
       </list>
     </option>
@@ -166,8 +172,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="482" />
-    <option name="y" value="80" />
+    <option name="x" value="621" />
+    <option name="y" value="251" />
     <option name="width" value="1408" />
     <option name="height" value="817" />
   </component>
@@ -199,7 +205,27 @@
             <path>
               <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
               <item name="寻忆" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="classic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
+              <item name="寻忆" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="classic" type="462c0819:PsiDirectoryNode" />
+              <item name="movie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
+              <item name="寻忆" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="epsoide" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
+              <item name="寻忆" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="like" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
@@ -210,6 +236,18 @@
               <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
               <item name="寻忆" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
+              <item name="寻忆" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="books" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
+              <item name="寻忆" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="classic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="寻忆" type="b2602c69:ProjectViewProjectNode" />
@@ -262,10 +300,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79142000" />
+    <option name="totallyTimeSpent" value="88985000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="482" y="80" width="1408" height="817" extended-state="0" />
+    <frame x="621" y="251" width="1408" height="817" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1540146" />
@@ -305,23 +343,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.wxss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/classic/classic.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/component/like/index.json" />
     <entry file="file://$PROJECT_DIR$/component/like/index.wxss" />
     <entry file="file://$PROJECT_DIR$/component/like/index.js" />
@@ -390,13 +411,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/epsoide/index.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/epsoide/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/classic/music/index.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -467,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/setStorage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -492,49 +499,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/likeModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="91" column="19" lean-forward="true" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
-          <folding>
-            <element signature="e#34#71#0" expanded="true" />
-            <element signature="e#1759#2587#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/like/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/classic/movie/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/classic/classic.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="147" selection-start-line="11" selection-start-column="137" selection-end-line="11" selection-end-column="147" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/classic/classic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -552,9 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/books/books.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/books/books.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -569,10 +534,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/books/books.wxss">
+    <entry file="file://$PROJECT_DIR$/pages/classic/classic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        <state relative-caret-position="283">
+          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/navigation/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="691">
+          <caret line="82" column="41" lean-forward="true" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+          <folding>
+            <element signature="e#34#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/likeModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -583,24 +565,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="38" column="59" selection-start-line="38" selection-start-column="59" selection-end-line="38" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/_http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/components/book/index.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        <state relative-caret-position="90">
+          <caret line="6" column="53" lean-forward="true" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/classic/movie/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/like/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/epsoide/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/book/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/book/index.wxss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="30" column="21" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="645">
+          <caret line="43" column="15" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/books/books.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/book.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/books/books.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/books/books.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>

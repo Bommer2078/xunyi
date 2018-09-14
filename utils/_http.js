@@ -33,16 +33,17 @@ function Http (){
 // }
 
 
-export {Http}
 
-//
-Http.prototype.request = function({url,data={},method='GET'}){
+
+
+Http.prototype.request = function({ url }){
+    console.log(url)
     let theUrl = this.baseResUrl + url
+
+    console.log(theUrl)
     return new Promise((resolve,reject)=>{
         wx.request({
-            url:theUrl,
-            data,
-            method,
+            url: theUrl,
             header:{
                 'content-type':'application/json',
                 'appkey':config.appkey
@@ -63,3 +64,6 @@ Http.prototype.request = function({url,data={},method='GET'}){
         })
      })
 }
+
+
+export {Http}

@@ -34,10 +34,18 @@
 .info-card .title{
     font-size: 24rpx;
     color:#1f1f1f;
+    max-width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 .info-card .auth{
     font-size: 20rpx;
-    color:#999
+    color:#999;
+    max-width: 200rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 
 .info{

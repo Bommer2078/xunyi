@@ -77,12 +77,10 @@ Component({
                   url ='/classic/' + currIndex + '/previous'
                   break
           }
-          http.request({
-              url,
-              success:(data)=>{
-                 this._updateToClassic(data)
-                  setStorage(data.index,data)
-              }
+          let promise = http.request({url})
+          promise.then((data)=>{
+              this._updateToClassic(data)
+              setStorage(data.index,data)
           })
       },
       // 向父组件传值
