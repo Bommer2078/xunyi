@@ -1,0 +1,7 @@
+<!--components/searchBar/index.wxml-->
+<view class="container">
+    <view class="search-bar">
+        <image src="../../images/search.png" />
+        <text>搜索图书名称</text>
+    </view>
+</view>

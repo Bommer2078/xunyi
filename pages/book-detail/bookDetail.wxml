@@ -1,0 +1,57 @@
+<!--pages/book-detail/bookDetail.wxml-->
+<search-cmp />
+<view class="container">
+    <view class="section cover">
+        <image src="{{bookInfo.image}}"/>
+        <text class="book-title">{{bookInfo.title}}</text>
+        <text class="book-auth">{{bookInfo.author}}</text>
+    </view>
+    <view class="section">
+        <text class="sub-title">短評</text>
+        <view class="sub-content  short-comment">
+            <block wx:for="{{shortComment}}" wx:key="{{index}}">
+                <view class="comment">
+                    <text class="content">{{item.content}}</text>
+                    <text class="add">+</text>
+                    <text class="nums">{{item.nums}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="section introduce">
+        <text class="sub-title">內容簡介</text>
+        <view class="sub-content">{{bookInfo.summary}}</view>
+    </view>
+    <view class="section book-info">
+        <text class="sub-title">書本信息</text>
+        <view class="sub-content">
+            <view class="row">
+                <text>出版社</text>
+                <text>{{bookInfo.publisher}}</text>
+            </view>
+
+             <view class="row">
+                 <text>出版年</text>
+                 <text>{{bookInfo.pubdate}}</text>
+             </view>
+
+            <view class="row">
+                <text>页数</text>
+                <text>{{bookInfo.pages}}</text>
+            </view>
+
+            <view class="row">
+                <text>定价</text>
+                <text>{{bookInfo.price}}</text>
+            </view>
+
+            <view class="row">
+                <text>装帧</text>
+                <text>{{bookInfo.binding}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<comment-cmp>
+    <like-cmp bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
+</comment-cmp>

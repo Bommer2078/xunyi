@@ -1,5 +1,5 @@
 <!--components/books/index.wxml-->
-<view class="container">
+<view class="container" bind:tap="handleBookTap">
     <image src="{{book.image}}" />
     <view class="info-card">
         <view class="book-info">
@@ -7,7 +7,7 @@
             <text class="auth">{{book.author}}</text>
         </view>
         <view class="info">
-            <text class="likes">{{book.fav_nums}} 喜欢 · {{}} 短评</text>
+            <text class="likes">{{book.fav_nums}} 喜欢 · {{shortCommentNum}} 短评</text>
         </view>
     </view>
 </view>

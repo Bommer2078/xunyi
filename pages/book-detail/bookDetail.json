@@ -1,0 +1,7 @@
+{
+    "usingComponents":{
+        "search-cmp":"/components/searchBar/index",
+        "comment-cmp":"/components/comment/index",
+        "like-cmp":"/components/like/index"
+    }
+}

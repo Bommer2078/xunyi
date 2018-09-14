@@ -1,5 +1,4 @@
 // pages/books/books.js
-import { Http } from '../../utils/http'
 import bookMolde from '../../model/book'
 Page({
 
@@ -14,8 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options){
-      bookMolde.getBooksData(this)
+      this.getBooksInfo()
   },
+
+    getBooksInfo(){
+        let books = bookMolde.getBooksData()
+        books.then(res=>{
+            this.setData({
+                books:res
+            })
+        })
+    },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -28,6 +36,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+      this.getBooksInfo()
 
   },
 

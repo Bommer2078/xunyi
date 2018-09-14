@@ -1,33 +1,6 @@
 /* pages/books/books.wxss */
-.search{
-    width: 100%;
-    height: 108rpx;
-    position: fixed;
-    top:0;
-    left:0;
-    color:#999;
-    z-index: 99;
-    background: #fff;
-}
-
-.search-bar{
-    width: 690rpx;
-    height: 68rpx;
-    margin: 20rpx auto;
-    text-align: center;
-    line-height: 68rpx;
-    border-radius: 40rpx;
-    background: #f7f7f7;
-}
-
-.search-bar > image{
-    width: 28rpx;
-    height: 28rpx;
-    margin-right:15rpx;
-}
-
 .books-container {
-    margin-top:108rpx;
+    margin-top: 108rpx;
     padding-top: 40rpx;
     text-align: center;
     background: #f9f9f9;
@@ -37,7 +10,6 @@
     width: 107rpx;
     height: 32rpx;
     margin-bottom:25rpx;
-    margin:;
 }
 .block{
     display: flex;
@@ -47,6 +19,6 @@
 
 .books-container .book{
     margin-bottom: 60rpx;
-    margin-left:40rpx;
-    margin-right:40rpx;
+    margin-left: 40rpx;
+    margin-right: 40rpx;
 }

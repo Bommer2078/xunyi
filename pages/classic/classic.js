@@ -1,6 +1,6 @@
 import {Http} from '../../utils/http'
 import {setStorage} from '../../utils/setStorage'
-import { getLikeData } from '../../model/likeModel'
+import { getLikeData ,handleLikeClick } from '../../model/likeModel'
 
 Page({
   data: {
@@ -16,10 +16,10 @@ Page({
 
   getClassicData(){
       let http = new Http()
-      let classic = http.request({
+      let promise = http.request({
           url:'/classic/latest',
       })
-      classic.then((res) => {
+      promise.then((res) => {
           console.log(res)
           this.setData({
               classic:res,
@@ -33,18 +33,11 @@ Page({
 
     // 子组件上传的数据
    like(data){
-       let http = new Http()
-       let isLike = data.detail.isLike
-       let url = isLike?'/like':'/like/cancel'
-       let promise = http.request({
-           url,
-           method:'POST',
-           data:{
-               art_id:this.data.classic.id,
-               type:this.data.classic.type
-           }
+       handleLikeClick({
+           data,
+           art_id:this.data.classic.id,
+           type:this.data.classic.type
        })
-
    },
 
     pushBtn(res){

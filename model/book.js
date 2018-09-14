@@ -1,18 +1,34 @@
 import {Http} from "../utils/http";
 
 const bookMolde = {
-    getBooksData(that){
+    getBooksData(){
         const http = new Http()
-        let promise = http.request({
+        return http.request({
             url:'/book/hot_list'
         })
+    },
 
-        promise.then(res=>{
-            that.setData({
-                books:res
-            })
-        },err=>console.log(err))
+    getShortComment(id){
+        const http = new Http()
+        return http.request({
+            url:`/book/${id}/short_comment`
+        })
+    },
+
+    getBooksDetail(id){
+        const http = new Http()
+        return http.request({
+            url:`/book/${id}/detail`
+        })
+    },
+
+    getBooksFavor(id){
+        const http = new Http()
+        return http.request({
+            url:`/book/${id}/favor`
+        })
     }
+
 }
 
 export default bookMolde
