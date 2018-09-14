@@ -9,7 +9,6 @@ Component({
         musicTitle:String
     },
     data: {
-        imgUrl:'images/音乐。@2x.png',
         isPlay:false
     },
 

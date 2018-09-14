@@ -5,7 +5,7 @@
         <text>留下你的短评~</text>
     </view>
     <view>
-        <slot></slot>
+        <slot name="like"></slot>
         <image src="images/share.png" class="share"/>
     </view>
 </view>

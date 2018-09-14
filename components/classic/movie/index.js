@@ -6,6 +6,6 @@ Component({
 
     },
     data: {
-        imgUrl:'images/电影。@2x.png'
+        imgUrl:'images/movie.png'
     }
 })

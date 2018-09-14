@@ -58,6 +58,7 @@
     height: 300rpx;
     margin-top:10rpx;
     margin-bottom: 30rpx;
+    box-shadow: 2px 2px 0 0 #3e3e3e;
 }
 
 .cover .book-title{

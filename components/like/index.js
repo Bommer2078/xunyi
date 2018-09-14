@@ -17,8 +17,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-      likeUrl:'images/喜欢-拷贝@2x的副本.png',
-      unlikeUrl:'images/喜欢@2x.png',
+      likeUrl:'images/like.png',
+      unlikeUrl:'images/unlike.png',
   },
 
   /**

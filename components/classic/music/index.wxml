@@ -2,9 +2,9 @@
 <view class="container">
     <view class="main">
         <image class="circle {{isPlay?'rotation':''}}" src="{{classicImg}}" bind:tap="onPlay" animation="{{animationData}}"/>
-        <image class="play" src="{{isPlay?'images/播放中.png':'images/暂停中.png'}}" bind:tap="onPlay"/>
+        <image class="play" src="{{isPlay?'images/play.png':'images/pause.png'}}" bind:tap="onPlay"/>
     </view>
-    <image src="images/音乐。@2x.png" class="text-img" />
+    <image src="images/music.png" class="text-img" />
     <text>{{classicContent}}</text>
 </view>
 

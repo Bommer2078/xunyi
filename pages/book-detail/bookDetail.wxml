@@ -53,5 +53,5 @@
     </view>
 </view>
 <comment-cmp>
-    <like-cmp bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
+    <like-cmp slot="like" bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
 </comment-cmp>
