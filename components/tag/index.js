@@ -19,6 +19,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+      tapTag(){
+          this.triggerEvent('tapTag',{
+              content:this.properties.text
+          },{})
+      }
   }
 })

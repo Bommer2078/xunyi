@@ -1,5 +1,5 @@
 <!--components/tag/index.wxml-->
-<view class="tag out-tag">
+<view class="tag out-tag" bind:tap="tapTag">
     <slot name="before" class="out-before"></slot>
     <text class="content">{{text}}</text>
     <slot name="after" class="out-after"></slot>
