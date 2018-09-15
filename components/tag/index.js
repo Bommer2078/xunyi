@@ -1,13 +1,11 @@
-// components/comment/index.js
+// components/tag/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
   options:{
       multipleSlots:true
   },
-  properties: {
 
+  properties: {
+      text:String
   },
 
   /**

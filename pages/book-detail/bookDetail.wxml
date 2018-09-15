@@ -1,5 +1,8 @@
 <!--pages/book-detail/bookDetail.wxml-->
+<wxs src="../../utils/filter.wxs" module="util" />
 <search-cmp />
+
+<!--书籍内容-->
 <view class="container">
     <view class="section cover">
         <image src="{{bookInfo.image}}"/>
@@ -9,18 +12,16 @@
     <view class="section">
         <text class="sub-title">短評</text>
         <view class="sub-content  short-comment">
-            <block wx:for="{{shortComment}}" wx:key="{{index}}">
-                <view class="comment">
-                    <text class="content">{{item.content}}</text>
-                    <text class="add">+</text>
-                    <text class="nums">{{item.nums}}</text>
-                </view>
+            <block wx:for="{{util.limit(shortComment,6)}}" wx:key="{{index}}">
+                <tag-cmp  text="{{item.content}}">
+                        <text class="out-after" slot="after"> +{{item.nums}}</text>
+                </tag-cmp>
             </block>
         </view>
     </view>
     <view class="section introduce">
         <text class="sub-title">內容簡介</text>
-        <view class="sub-content">{{bookInfo.summary}}</view>
+        <text class="sub-content" decode="true">{{util.filter(bookInfo.summary)}}</text>
     </view>
     <view class="section book-info">
         <text class="sub-title">書本信息</text>
@@ -52,6 +53,43 @@
         </view>
     </view>
 </view>
-<comment-cmp>
-    <like-cmp slot="like" bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
-</comment-cmp>
+
+<!--假短评-->
+<view class="input-fake" hidden="{{isInput}}">
+    <view class="input-bar" bind:tap="handleTapInput">
+        <image src="images/comment.png" />
+        <text>留下你的短评~</text>
+    </view>
+    <view>
+        <like-cmp />
+        <image src="images/share.png" class="share"/>
+    </view>
+</view>
+
+<!--真短评输入框-->
+<view class="input-comment" hidden="{{!isInput}}">
+    <view class="input-head">
+        <view class="text-left" wx:if="{{shortComment.length > 0}}">
+            点击标签即可+1
+        </view>
+        <view class="text-left" wx:else>
+            暂无标签
+        </view>
+        <view class="enter" bind:tap="handleTapEnter">
+            确定
+        </view>
+    </view>
+    <view class="input-short-comment short-comment">
+        <block wx:for="{{util.limit(shortComment,3)}}" wx:key="{{index}}">
+            <tag-cmp  text="{{item.content}}" bind:tap="handleTapTag"/>
+        </block>
+    </view>
+    <view class="input-frame">
+        <input type="text" placeholder="输入您的短评，可输入12字" bindconfirm="handleTapEnter"/>
+    </view>
+</view>
+
+<!--遮罩-->
+<view hidden="{{!isInput}}">
+    <mask-cmp />
+</view>

@@ -1,0 +1,17 @@
+function filter (str){
+    if(!str){
+        return
+    }
+    var rex = getRegExp('\\\\n','g')
+    return str.replace(rex,'\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;')
+
+}
+
+function limit (arr,num){
+    return arr.slice(0,num)
+}
+
+module.exports = {
+    filter:filter,
+    limit:limit
+}

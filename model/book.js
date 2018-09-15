@@ -27,8 +27,7 @@ const bookMolde = {
         return http.request({
             url:`/book/${id}/favor`
         })
-    }
-
+    },
 }
 
 export default bookMolde

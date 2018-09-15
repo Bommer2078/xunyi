@@ -26,6 +26,10 @@
     margin-bottom: 30rpx;
 }
 
+.section .short-comment{
+    padding-left:25rpx;
+}
+
 .introduce .sub-content,.book-info .sub-content{
     width: 100%;
     padding-left:60rpx;
@@ -36,6 +40,7 @@
 .introduce .sub-content{
     font-size: 28rpx;
     color:#666;
+    text-indent: 56rpx;
 }
 
 .book-info .row text:nth-child(1){
@@ -81,12 +86,11 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left:25rpx;
     box-sizing: border-box;
 }
 
 .short-comment .comment{
-    line-height: 56rpx;
+    line-height: 40rpx;
     text-justify: center;
     border-radius: 52rpx;
     margin-right:20rpx;
@@ -96,27 +100,128 @@
     background: #f7f7f7;
 }
 
-.short-comment .comment:nth-child(1){
-    background: #fffadd;
+.short-comment tag-cmp{
+    margin-right:20rpx;
+    margin-bottom:20rpx;
 }
 
-.short-comment .comment:nth-child(2){
-    background: #eefaff;
+.short-comment tag-cmp:nth-child(1) view{
+    background: #fffadd !important;
 }
 
-.comment .content{
+.short-comment tag-cmp:nth-child(2) view{
+    background: #eefaff !important;
+}
+
+.short-comment .out-after{
+    font-size: 20rpx;
+    color: #bbb;
+}
+
+.input-comment {
+    min-height: 320rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    border-top:1px solid #eee;
+    z-index:101;
+    background: #fff;
+}
+
+.input-comment .input-head{
+    width: 100%;
+    height:100rpx;
+    font-size: 34rpx;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:25rpx;
+    padding-right:25rpx;
+    box-sizing: border-box;
+}
+
+.input-head .text-left{
+    color:#999;
+}
+
+.input-head .enter{
+    font-weight: 600;
+}
+
+.input-short-comment{
+    padding-top:40rpx;
+    padding-bottom:30rpx;
+    padding-left:25rpx;
+    padding-right:25rpx;
+    box-sizing: border-box;
+}
+
+.input-frame{
+    width: 100%;
+    padding-left:25rpx;
+    padding-right:25rpx;
+    padding-bottom:40rpx;
+    box-sizing: border-box;
+}
+
+.input-frame > input{
+    width: 100%;
+    height: 68rpx;
+    border-radius: 34rpx;
+    background: #f5f5f5;
+    padding-left:32rpx;
+    font-size: 28rpx;
+    box-sizing: border-box;
+}
+
+
+/*假点评样式*/
+.input-fake {
+    width: 100%;
+    height: 88rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    left:0;
+    padding:16rpx 30rpx;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: 100;
+}
+
+.input-bar{
+    width: 405rpx;
+    height: 54rpx;
+    display: flex;
+    align-items: center;
+    line-height: 54rpx;
+    border-radius: 27rpx;
+    border: 1px solid #000;
+}
+.input-bar > image{
+    width: 24rpx;
+    height: 24rpx;
+    margin-left:32rpx;
+    margin-right:10rpx;
+
+}
+
+.input-bar > text {
     font-size: 24rpx;
-    color:#666;
+    color:#010101;
 }
 
-.comment .add {
-    color: #bbb;
-    font-size: 20rpx;
-    vertical-align: middle;
-    margin-left:10rpx;
-}
-
-.comment .nums{
-    font-size: 20rpx;
-    color: #bbb;
+.share {
+    width: 28rpx;
+    height: 28rpx;
+    margin-left:60rpx;
 }
