@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/books/books",
     "pages/classic/classic",
+    "pages/books/books",
     "pages/book-detail/bookDetail"
   ],
   "window": {

@@ -28,6 +28,15 @@ const bookMolde = {
             url:`/book/${id}/favor`
         })
     },
+
+    addComment(data){
+        const http = new Http()
+        return http.request({
+            url:`/book/add/short_comment`,
+            method:'POST',
+            data
+        })
+    }
 }
 
 export default bookMolde

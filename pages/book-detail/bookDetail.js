@@ -10,7 +10,8 @@ Page({
         bookInfo:{},
         favor:{},
         shortComment:[],
-        isInput:false
+        isInput:false,
+        inputContent:''
     },
 
     /**
@@ -28,57 +29,77 @@ Page({
         })
     },
 
-    inputTap(data){
-        this.setData({
-            isInput:data.detail.isInput
-        })
-    },
-
     setBooksData(options){
+        wx.showLoading()
         const bookId = options.bookId
         const bookInfo = bookMolde.getBooksDetail(bookId)
         const favor = bookMolde.getBooksFavor(bookId)
         const shortComment = bookMolde.getShortComment(bookId)
 
-        bookInfo.then(res=>{
-            this.setData({
-                bookInfo:res
+        Promise.all([bookInfo,favor,shortComment])
+            .then(res=>{
+                console.log(res)
+                this.setData({
+                    bookInfo:res[0],
+                    favor:res[1],
+                    shortComment:res[2].comments
+                })
+                wx.hideLoading()
             })
-            console.log(res)
-        })
-        favor.then(res=>{
-            this.setData({
-                favor:res
-            })
-            console.log(res)
-        })
-        shortComment.then(res=>{
-            this.setData({
-                shortComment:res.comments
-            })
-            console.log(res)
-        })
     },
 
     changeIsInput() {
         this.setData({
-            isInput:false
+            isInput:false,
+            inputContent:''
         })
     },
 
-    handleTapEnter(){
+
+// 添加短评
+    handleTap(ev){
+        const content = ev.detail.content||ev.detail.value
+        if(content.length > 12){
+            wx.showToast({
+                title:'超过字数，请重新输入',
+                icon:'none'
+            })
+            this.changeIsInput()
+            return
+        }
+        this.addToShortComment(content)
+        this.postComment(this.data.bookInfo.id,content)
         this.changeIsInput()
     },
 
-    handleTapTag(){
-        this.changeIsInput()
-    },
-
-    handleTapInput(){
+    handleTapFake(){
         this.setData({
             isInput:true
         })
-    }
+    },
 
+    postComment(id,content){
+        let promise = bookMolde.addComment({
+            book_id:id,
+            content
+        })
+        promise.then(res=>{
+            wx.showToast({
+                title:'评论已增加',
+                icon:'success'
+            })
+        })
+    },
+
+    addToShortComment(content){
+        let arr = this.data.shortComment
+        arr.unshift({
+            content,
+            nums:1
+        })
+        this.setData({
+            shortComment:arr
+        })
+    }
 
 })

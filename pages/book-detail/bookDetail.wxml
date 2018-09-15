@@ -11,13 +11,14 @@
     </view>
     <view class="section">
         <text class="sub-title">短評</text>
-        <view class="sub-content  short-comment">
+        <view class="sub-content  short-comment"  wx:if="{{shortComment.length > 0}}">
             <block wx:for="{{util.limit(shortComment,6)}}" wx:key="{{index}}">
                 <tag-cmp  text="{{item.content}}">
                         <text class="out-after" slot="after"> +{{item.nums}}</text>
                 </tag-cmp>
             </block>
         </view>
+        <view wx:else style="font-size: 28rpx;color:#333;">暂时没有短评</view>
     </view>
     <view class="section introduce">
         <text class="sub-title">內容簡介</text>
@@ -56,12 +57,12 @@
 
 <!--假短评-->
 <view class="input-fake" hidden="{{isInput}}">
-    <view class="input-bar" bind:tap="handleTapInput">
+    <view class="input-bar" bind:tap="handleTapFake">
         <image src="images/comment.png" />
         <text>留下你的短评~</text>
     </view>
     <view>
-        <like-cmp />
+        <like-cmp bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
         <image src="images/share.png" class="share"/>
     </view>
 </view>
@@ -75,17 +76,17 @@
         <view class="text-left" wx:else>
             暂无标签
         </view>
-        <view class="enter" bind:tap="handleTapEnter">
-            确定
+        <view class="enter" bind:tap="changeIsInput">
+            取消
         </view>
     </view>
     <view class="input-short-comment short-comment">
         <block wx:for="{{util.limit(shortComment,3)}}" wx:key="{{index}}">
-            <tag-cmp  text="{{item.content}}" bind:tap="handleTapTag"/>
+            <tag-cmp  text="{{item.content}}" bind:tapTag="handleTap" />
         </block>
     </view>
     <view class="input-frame">
-        <input type="text" placeholder="输入您的短评，可输入12字" bindconfirm="handleTapEnter"/>
+        <input type="text" placeholder="输入您的短评，可输入12字" bindconfirm="handleTap" value="{{inputContent}}"/>
     </view>
 </view>
 
