@@ -1,6 +1,6 @@
 <!--pages/books/books.wxml-->
-<search-cmp />
-<view class="books-container">
+<search-cmp  hotList="{{hotList}}"/>
+<view class="books-container" hidden="{{showSearch}}">
     <image src="../../images/jingxuan.png" />
     <view class="block">
         <block wx:for="{{books}}" wx:key="{{id}}">

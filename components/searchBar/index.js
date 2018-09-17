@@ -1,23 +1,45 @@
 // components/searchBar/index.js
+import bookMolde from '../../model/book'
 Component({
-  /**
-   * 组件的属性列表
-   */
   properties: {
-
+      hotList:Array
   },
 
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+      showSearch:false,
+      searchResolveList:[]
   },
 
-  /**
-   * 组件的方法列表
-   */
   methods: {
+      searchTap(){
+          this.setData({
+              showSearch:!this.data.showSearch
+          })
+          this.triggerEvent('isSearch',{
+              showSearch:this.data.showSearch
+        },{})
+          console.log(this.properties.hotList)
+      },
 
+      handleSearch(event){
+          if(!event){
+              wx.showToast({
+                  text:'请输入书名',
+                  icon:'none'
+              })
+              return
+          }
+          // const searchWord = event.detail.content||event.detail.value
+          const searchWord = event.detail.value
+          bookMolde.search(searchWord)
+              .then(res=>{
+                  console.log(this.data.searchResolveList)
+                  this.setData({
+                      searchResolveList:res.books
+                  })
+                  console.log(this.data.searchResolveList)
+              })
+
+      }
   }
 })

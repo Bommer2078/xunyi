@@ -1,24 +1,2 @@
 /* pages/books/books.wxss */
-.books-container {
-    margin-top: 108rpx;
-    padding-top: 40rpx;
-    text-align: center;
-    background: #f9f9f9;
-}
-
-.books-container > image{
-    width: 107rpx;
-    height: 32rpx;
-    margin-bottom:25rpx;
-}
-.block{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.books-container .book{
-    margin-bottom: 60rpx;
-    margin-left: 40rpx;
-    margin-right: 40rpx;
-}
+@import 'commen.wxss';

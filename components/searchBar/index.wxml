@@ -1,7 +1,55 @@
 <!--components/searchBar/index.wxml-->
+<wxs src="../../utils/filter.wxs" module="tool"/>
 <view class="container">
-    <view class="search-bar">
-        <image src="../../images/search.png" />
-        <text>搜索图书名称</text>
+    <!--搜索头-->
+    <view class="fake-container" hidden="{{showSearch}}" bind:tap="searchTap">
+        <view class="search-bar">
+            <image src="images/search.png" />
+            <text>搜索图书名称</text>
+        </view>
+    </view>
+
+    <!--搜索主体-->
+    <view class="main-container" hidden="{{!showSearch}}">
+        <view class="header">
+            <view class="search-input">
+                <image src="images/search.png"/>
+                <input type="text" placeholder="搜索图书名称" bindconfirm="handleSearch"/>
+                <image src="images/x.png"/>
+            </view>
+            <view class="search-cancel" bind:tap="searchTap">取消</view>
+        </view>
+
+        <view class="search-body">
+            <view class="section">
+                <view class="section-title">
+                    历史搜索
+                </view>
+                <view class="tag">
+                    <block wx:for="{{}}" wx:key="">
+                    </block>
+                </view>
+            </view>
+            <view class="section">
+                <view class="section-title">
+                    热门搜索
+                </view>
+                <view class="tags">
+                    <block wx:for="{{tool.limit(hotList,8)}}" wx:key="">
+                        <tag-cmp class="tag" text="{{item}}"/>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <!--搜索结果-->
+    <view class="books-container" hidden="{{searchResolveList.length === 0}}">
+        <view class="block">
+            <block wx:for="{{searchResolveList}}" wx:key="{{id}}">
+                <book-cmp class="book" book="{{item}}" />
+            </block>
+        </view>
+        <view>{{test[0]}}</view>
     </view>
 </view>

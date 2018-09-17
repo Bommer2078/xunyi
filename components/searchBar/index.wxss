@@ -1,5 +1,8 @@
 /* components/searchBar/index.wxss */
-.container{
+
+@import '../../pages/books/commen.wxss';
+/*搜索头样式*/
+.fake-container{
     width: 100%;
     height: 108rpx;
     position: fixed;
@@ -7,7 +10,11 @@
     left:0;
     color:#999;
     z-index: 99;
+    padding-left:30rpx;
+    padding-right:30rpx;
     background: #fff;
+    box-shadow: 0 -1rpx 10rpx 0 #3e3e3e ;
+    box-sizing: border-box;
 }
 
 .search-bar{
@@ -25,3 +32,93 @@
     height: 28rpx;
     margin-right:15rpx;
 }
+
+/*真搜索头样式*/
+
+.main-container .header {
+    width: 100%;
+    height:108rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top:0;
+    box-shadow: 0 -1rpx 10rpx 0 #3e3e3e ;
+    background: #fff;
+    z-index:99;
+}
+
+.header .search-input{
+    width: 540rpx;
+    height: 68rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left:30rpx;
+    padding-right:30rpx;
+    box-sizing: border-box;
+    border-radius: 34rpx;
+    background: #f7f7f7;
+}
+
+.search-input > image {
+    width: 28rpx;
+    height: 28rpx;
+}
+
+.search-input > input {
+    margin-left:10rpx;
+    flex-grow: 2;
+}
+
+.search-cancel{
+    width: 118rpx;
+    height:66rpx;
+    line-height: 66rpx;
+    text-align: center;
+    color:#666;
+    border: 1px solid #666;
+    border-radius: 33rpx;
+}
+
+.search-cancel:active{
+    background: #eee;
+}
+
+/*搜索体样式*/
+.search-body{
+    position: fixed;
+    top:108rpx;
+    left:0;
+    right:0;
+    bottom:0;
+    background: #fff;
+    z-index: 50;
+}
+
+.search-body .section{
+    padding:40rpx 60rpx;
+}
+
+.section .section-title{
+    font-size: 28rpx;
+    color:#010101;
+    margin-left:-20rpx;
+    padding-left:20rpx;
+    border-left:8rpx solid #000;
+}
+
+.section .tags{
+    padding-top:30rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.tags .tag{
+    margin-right:20rpx;
+    margin-bottom:20rpx;
+}
+

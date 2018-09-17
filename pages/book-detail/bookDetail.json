@@ -1,6 +1,5 @@
 {
     "usingComponents":{
-        "search-cmp":"/components/searchBar/index",
         "like-cmp":"/components/like/index",
         "tag-cmp":"/components/tag/index",
         "mask-cmp":"/components/mask/index"

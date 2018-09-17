@@ -1,6 +1,6 @@
 /* pages/book-detail/bookDetail.wxss */
 .container{
-    margin-top:108rpx;
+    /*margin-top:108rpx;*/
     margin-bottom: 88rpx;
     overflow: hidden;
     background: #f5f5f5;
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top:20rpx;
+    margin-bottom:20rpx;
     padding-top: 30rpx;
     padding-bottom: 30rpx;
     background: #fff;
@@ -28,6 +28,10 @@
 
 .section .short-comment{
     padding-left:25rpx;
+}
+
+.book-info {
+    margin-bottom: 0;
 }
 
 .introduce .sub-content,.book-info .sub-content{
@@ -193,6 +197,7 @@
     bottom:0;
     left:0;
     padding:16rpx 30rpx;
+    box-shadow: 0 1px 10rpx 1rpx #3e3e3e;
     box-sizing: border-box;
     background: #fff;
     z-index: 100;

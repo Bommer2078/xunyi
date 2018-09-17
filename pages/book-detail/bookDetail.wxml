@@ -1,7 +1,5 @@
 <!--pages/book-detail/bookDetail.wxml-->
 <wxs src="../../utils/filter.wxs" module="util" />
-<search-cmp />
-
 <!--书籍内容-->
 <view class="container">
     <view class="section cover">
@@ -94,3 +92,5 @@
 <view hidden="{{!isInput}}">
     <mask-cmp />
 </view>
+
+<view>books-d</view>
