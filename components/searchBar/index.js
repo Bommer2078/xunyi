@@ -1,5 +1,6 @@
 // components/searchBar/index.js
 import bookMolde from '../../model/book'
+import {getStorage,setStorage} from '../../utils/setStorage'
 Component({
   properties: {
       hotList:Array
@@ -9,7 +10,15 @@ Component({
       showSearch:false,
       searchResolveList:[],
       inputValue:'',
-      showNothing:false
+      showNothing:false,
+      history:[]
+  },
+
+  ready(){
+      let historyData = getStorage('searchHistory')
+      this.setData({
+          history:historyData
+      })
   },
 
   methods: {
@@ -24,16 +33,20 @@ Component({
       },
 
       handleSearch(event){
-          if(!event.detail.value){
+          const searchWord = event.detail.content||event.detail.value
+          if(!searchWord){
               wx.showToast({
                   title:'请输入书名',
                   icon:'none'
               })
               return
           }
+
+          this.addHistory(searchWord)
+
           wx.showLoading()
-          // const searchWord = event.detail.content||event.detail.value
-          const searchWord = event.detail.value
+
+          // const searchWord = event.detail.value
           this._restoreSearch(searchWord)
 
           bookMolde.search(searchWord)
@@ -72,7 +85,34 @@ Component({
           this.setData({
               showNothing:true
           })
+      },
+
+      tapTag(event){
+          this.handleSearch(event)
+      },
+
+      addHistory(searchWord){
+          let boolean = this.data.history.some(item=>{
+              if(searchWord === item){
+                  return true
+              }
+          })
+
+          if(boolean){
+              return
+          }
+
+
+          let arr = this.data.history
+          arr.unshift(searchWord)
+          this.setData({
+              history:arr
+          })
+
+          setStorage('searchHistory',arr)
+
       }
   }
+
 
 })

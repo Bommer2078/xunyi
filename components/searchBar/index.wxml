@@ -27,8 +27,9 @@
                 <view class="section-title">
                     历史搜索
                 </view>
-                <view class="tag">
-                    <block wx:for="{{}}" wx:key="">
+                <view class="tags">
+                    <block wx:for="{{tool.limit(history,8)}}" wx:key="">
+                        <tag-cmp class="tag" text="{{item}}" bind:tapTag="tapTag"/>
                     </block>
                 </view>
             </view>
@@ -38,7 +39,7 @@
                 </view>
                 <view class="tags">
                     <block wx:for="{{tool.limit(hotList,8)}}" wx:key="">
-                        <tag-cmp class="tag" text="{{item}}"/>
+                        <tag-cmp class="tag" text="{{item}}" bind:tapTag="tapTag"/>
                     </block>
                 </view>
             </view>
