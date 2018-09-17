@@ -1,0 +1,73 @@
+/* components/likeCard/index.wxss */
+.container{
+    width: 330rpx;
+    height: 470rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.container .top{
+    width: 100%;
+    height: 80rpx;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:20rpx;
+    padding-right:20rpx;
+    box-sizing: border-box;
+}
+.top .tag{
+    width: 72rpx;
+    height: 40rpx;
+    font-size: 24rpx;
+    line-height: 40rpx;
+    text-align: center;
+    color:#0f0f0f;
+    background: #f7f7f7;
+}
+
+.top .like-nums > image{
+    width:32rpx;
+    height:28rpx;
+}
+
+.top .nums{
+    vertical-align: super;
+    font-size:18rpx;
+    color:#bbb;
+    margin-left:10rpx;
+}
+
+.container .middle{
+    width: 100%;
+    height: 240rpx;
+}
+
+.container .bottom{
+    height:70rpx;
+    width:245rpx;
+    font-size:28rpx;
+    text-align: start;
+    color:#999;
+    margin:40rpx 25rpx 40rpx 20rpx;
+    overflow: hidden;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+.music {
+    width: 200rpx;
+    height: 200rpx;
+    margin-top:35rpx;
+    border-radius: 50%;
+}
+
+.movie,.essay{
+    width: 330rpx;
+    height: 240rpx;
+}

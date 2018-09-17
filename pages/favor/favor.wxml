@@ -1,0 +1,27 @@
+<!--pages/favor/favor.wxml-->
+<view class="banner" style="background: url('images/banner.png') no-repeat center;background-size:cover;">
+    <view class="user-header">
+        <image src="{{userInfo.avatarUrl}}" />
+    </view>
+    <button open-type="getUserInfo" class="login" bindgetuserinfo="getUser" wx:if="{{!userInfo.nickName}}"></button>
+    <text class="user-name">{{userInfo.nickName||'点击登陆'}}</text>
+    <view class="info-box">
+        <view class="about">
+            <image src="images/about.png" />
+            <text>关于我们</text>
+        </view>
+        <view class="about">
+            <text class="nums">{{favorBookNum}}</text>
+            <text>喜欢的书</text>
+        </view>
+    </view>
+</view>
+
+<view class="like-container">
+    <image src="images/like.png"/>
+    <view class="block">
+        <block wx:for="{{favorItems}}" wx:key="">
+            <like-card-cmp  class="cmp" classic="{{item}}"/>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,16 @@
+<!--components/likeCard/index.wxml-->
+<view class="container" bind:tap="tapLikeCard">
+    <view class="top">
+        <view class="tag">
+            {{itemType[classic.type]}}
+        </view>
+        <view class="like-nums">
+            <image src="images/likeIcon.png" />
+            <text class="nums">{{classic.fav_nums}}</text>
+        </view>
+    </view>
+    <view class="middle">
+        <image class="{{imageType[classic.type]}}" src="{{classic.image}}" />
+    </view>
+    <text class="bottom">{{classic.content}}</text>
+</view>

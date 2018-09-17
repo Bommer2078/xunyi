@@ -1,0 +1,4 @@
+{
+    "usingComponents":{
+    "like-card-cmp":"/components/likeCard/index"
+}}

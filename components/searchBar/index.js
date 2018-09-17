@@ -11,13 +11,17 @@ Component({
       searchResolveList:[],
       inputValue:'',
       showNothing:false,
-      history:[]
+      searchHistory:[]
   },
 
   ready(){
       let historyData = getStorage('searchHistory')
+      if(!historyData){
+          return
+      }
+
       this.setData({
-          history:historyData
+          searchHistory:historyData
       })
   },
 
@@ -42,11 +46,8 @@ Component({
               return
           }
 
-          this.addHistory(searchWord)
-
           wx.showLoading()
 
-          // const searchWord = event.detail.value
           this._restoreSearch(searchWord)
 
           bookMolde.search(searchWord)
@@ -56,6 +57,8 @@ Component({
                       wx.hideLoading()
                       return
                   }
+
+                  this.addHistory(searchWord)
 
                   this.setData({
                       searchResolveList:res.books
@@ -92,21 +95,23 @@ Component({
       },
 
       addHistory(searchWord){
-          let boolean = this.data.history.some(item=>{
+          let boolean = this.data.searchHistory.some(item=>{
               if(searchWord === item){
                   return true
               }
           })
+
+          console.log(boolean)
 
           if(boolean){
               return
           }
 
 
-          let arr = this.data.history
+          let arr = this.data.searchHistory
           arr.unshift(searchWord)
           this.setData({
-              history:arr
+              searchHistory:arr
           })
 
           setStorage('searchHistory',arr)

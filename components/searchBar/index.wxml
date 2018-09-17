@@ -14,7 +14,13 @@
         <view class="header">
             <view class="search-input">
                 <image src="images/search.png"/>
-                <input type="text" placeholder="搜索图书名称" bindconfirm="handleSearch" value="{{inputValue}}"/>
+                <input
+                        type="text"
+                        placeholder="搜索图书名称"
+                        bindconfirm="handleSearch"
+                        value="{{inputValue}}"
+                        focus="{{showSearch}}"
+                />
                 <image src="images/x.png" bind:tap="restoreSearch" data-nothing=""/>
             </view>
             <view class="search-cancel" bind:tap="searchTap">取消</view>
@@ -28,7 +34,7 @@
                     历史搜索
                 </view>
                 <view class="tags">
-                    <block wx:for="{{tool.limit(history,8)}}" wx:key="">
+                    <block wx:for="{{tool.limit(searchHistory,5)}}" wx:key="">
                         <tag-cmp class="tag" text="{{item}}" bind:tapTag="tapTag"/>
                     </block>
                 </view>

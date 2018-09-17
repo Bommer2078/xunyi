@@ -1,0 +1,97 @@
+/* pages/favor/favor.wxss */
+
+.banner {
+    width: 100%;
+    height:573rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.banner .login{
+    width: 150rpx;
+    height: 180rpx;
+    position: absolute;
+    bottom:140rpx;
+    background: pink;
+    opacity: 0;
+
+}
+
+.banner .user-header{
+    width:120rpx;
+    height:120rpx;
+    border-radius: 50%;
+    margin-bottom: 18rpx;
+    background: pink;
+}
+
+.user-header > image{
+    width:120rpx;
+    height:120rpx;
+    border-radius: 50%;
+}
+.banner .user-name{
+    font-size: 34rpx;
+}
+
+.banner .info-box{
+    width: 100%;
+    height:135rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info-box .about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size:24rpx;
+    color:#999;
+}
+
+.info-box .about > image {
+    width:34rpx;
+    height:34rpx;
+}
+
+.info-box .about > text {
+    margin-top:20rpx;
+}
+.info-box .about .nums{
+    width: 34rpx;
+    height: 34rpx;
+    font-size:36rpx;
+    color:#000;
+    margin-top: 0;
+}
+
+.like-container{
+    min-height: calc(100vh - 613rpx);
+    padding-top: 40rpx;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.like-container >image {
+    width: 97rpx;
+    height:42rpx;
+}
+.block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.block .cmp {
+    margin-left:30rpx;
+    margin-bottom:30rpx;
+}
+
+
+

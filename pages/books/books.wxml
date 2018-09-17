@@ -7,4 +7,6 @@
             <book-cmp class="book" book="{{item}}" />
         </block>
     </view>
+
+
 </view>

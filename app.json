@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/classic/classic",
-        "pages/books/books",
-        "pages/book-detail/bookDetail"
+    "pages/books/books",
+    "pages/book-detail/bookDetail",
+    "pages/favor/favor"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -25,7 +26,7 @@
         "selectedIconPath": "images/book@highlight.png"
       },
       {
-        "pagePath": "pages/classic/classic",
+        "pagePath": "pages/favor/favor",
         "text": "喜欢",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/my@highlight.png"

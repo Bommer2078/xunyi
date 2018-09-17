@@ -1,5 +1,4 @@
 import {Http} from '../../utils/http'
-import {setStorage} from '../../utils/setStorage'
 import { getLikeData ,handleLikeClick } from '../../model/likeModel'
 
 Page({
@@ -11,28 +10,27 @@ Page({
   },
 
   onLoad: function (options) {
-      if(options.classic){
-
-      }
-      this.getClassicData()
+      this.getClassicData(options.type,options.id)
   },
 
-  getClassicData(){
-      let http = new Http()
-      let promise = http.request({
-          url:'/classic/latest',
-      })
-      promise.then((res) => {
-          console.log(res)
-          this.setData({
-              classic:res,
-              lastIndex:res.index,
-              count:res.fav_nums,
-              isLike:res.like_status
-          })
-          setStorage(res.index,res)
-      },err=>console.log(err))
-  },
+    getClassicData(type,id){
+        let http = new Http()
+        let promise = http.request({
+            url:`/classic/${type}/${id}`,
+        })
+        promise.then((res) => {
+            console.log(res)
+            this.setData({
+                classic:res,
+                lastIndex:res.index,
+                count:res.fav_nums,
+                isLike:res.like_status
+            })
+            this._getLikeData()
+        },err=>console.log(err))
+    },
+
+
 
     // 子组件上传的数据
    like(data){
@@ -43,15 +41,6 @@ Page({
        })
    },
 
-    pushBtn(res){
-        let classicData = res.detail.classicData
-
-        this.setData({
-            classic:classicData
-        })
-
-        this._getLikeData()
-    },
 
     // 更新like数据
     _getLikeData(){
