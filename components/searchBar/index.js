@@ -7,7 +7,9 @@ Component({
 
   data: {
       showSearch:false,
-      searchResolveList:[]
+      searchResolveList:[],
+      inputValue:'',
+      showNothing:false
   },
 
   methods: {
@@ -18,28 +20,59 @@ Component({
           this.triggerEvent('isSearch',{
               showSearch:this.data.showSearch
         },{})
-          console.log(this.properties.hotList)
+          this._restoreSearch()
       },
 
       handleSearch(event){
-          if(!event){
+          if(!event.detail.value){
               wx.showToast({
-                  text:'请输入书名',
+                  title:'请输入书名',
                   icon:'none'
               })
               return
           }
+          wx.showLoading()
           // const searchWord = event.detail.content||event.detail.value
           const searchWord = event.detail.value
+          this._restoreSearch(searchWord)
+
           bookMolde.search(searchWord)
               .then(res=>{
-                  console.log(this.data.searchResolveList)
+                  if(res.count == 0){
+                      this.showNoFind(true)
+                      wx.hideLoading()
+                      return
+                  }
+
                   this.setData({
                       searchResolveList:res.books
                   })
-                  console.log(this.data.searchResolveList)
-              })
 
+                  wx.hideLoading()
+              })
+      },
+
+      restoreSearch(){
+          this._restoreSearch()
+      },
+
+
+      _restoreSearch(inputValue){
+          if(!inputValue){
+              inputValue = ''
+          }
+          this.setData({
+              searchResolveList:[],
+              inputValue:inputValue,
+              showNothing:false
+          })
+      },
+
+      showNoFind(){
+          this.setData({
+              showNothing:true
+          })
       }
   }
+
 })

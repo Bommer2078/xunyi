@@ -95,7 +95,7 @@
     right:0;
     bottom:0;
     background: #fff;
-    z-index: 50;
+    /*z-index: 50;*/
 }
 
 .search-body .section{
@@ -120,5 +120,19 @@
 .tags .tag{
     margin-right:20rpx;
     margin-bottom:20rpx;
+}
+
+.show-nothing{
+    position: fixed;
+    top:108rpx;
+    right:0;
+    left:0;
+    bottom:0;
+    font-size: 34rpx;
+    color:#3e3e3e;
+    text-align: center;
+    padding-top:150rpx;
+    background: #e3e3e3;
+    z-index: 50;
 }
 

@@ -6,8 +6,8 @@
             <text class="title">{{book.title}}</text>
             <text class="auth">{{book.author}}</text>
         </view>
-        <view class="info">
-            <text class="likes">{{book.fav_nums}} 喜欢 · {{shortCommentNum}} 短评</text>
+        <view class="info" wx:if="{{book.fav_nums}}">
+            <text class="likes">{{book.fav_nums}} 喜欢 </text>
         </view>
     </view>
 </view>

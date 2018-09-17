@@ -14,13 +14,15 @@
         <view class="header">
             <view class="search-input">
                 <image src="images/search.png"/>
-                <input type="text" placeholder="搜索图书名称" bindconfirm="handleSearch"/>
-                <image src="images/x.png"/>
+                <input type="text" placeholder="搜索图书名称" bindconfirm="handleSearch" value="{{inputValue}}"/>
+                <image src="images/x.png" bind:tap="restoreSearch" data-nothing=""/>
             </view>
             <view class="search-cancel" bind:tap="searchTap">取消</view>
         </view>
 
-        <view class="search-body">
+        <view class="show-nothing" wx:if="{{showNothing}}">暂时木有收录该书籍</view>
+
+        <view class="search-body" hidden="{{searchResolveList.length > 0}}" wx:else>
             <view class="section">
                 <view class="section-title">
                     历史搜索
@@ -50,6 +52,5 @@
                 <book-cmp class="book" book="{{item}}" />
             </block>
         </view>
-        <view>{{test[0]}}</view>
     </view>
 </view>
