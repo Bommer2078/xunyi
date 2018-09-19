@@ -1,5 +1,5 @@
 <!--pages/books/books.wxml-->
-<search-cmp bind:isSearch="isSearch" hotList="{{hotList}}"/>
+<search-cmp bind:isSearch="isSearch" hotList="{{hotList}}" more="{{more}}"/>
 <view class="books-container" hidden="{{showSearch}}">
     <image src="../../images/jingxuan.png" />
     <view class="block">

@@ -1,10 +1,12 @@
 // pages/books/books.js
 import bookMolde from '../../model/book'
+import { random } from '../../utils/tools'
 Page({
     data: {
         books:[],
         showSearch:false,
-        hotList:[]
+        hotList:[],
+        more:''
     },
     onLoad: function (options){
         this.getBooksInfo()
@@ -38,5 +40,11 @@ Page({
             showSearch:event.detail.showSearch
         })
         console.log(event.detail.showSearch)
+    },
+
+    onReachBottom(){
+        this.setData({
+            more:random(16)
+        })
     }
 })

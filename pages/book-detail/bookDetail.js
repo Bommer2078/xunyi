@@ -100,6 +100,14 @@ Page({
         this.setData({
             shortComment:arr
         })
+    },
+
+    onShareAppMessage(res){
+        return {
+            title:'洪叔的小程序',
+            path:'/page/classic/classic'
+        }
     }
+
 
 })

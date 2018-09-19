@@ -21,7 +21,7 @@
                         value="{{inputValue}}"
                         focus="{{showSearch}}"
                 />
-                <image src="images/x.png" bind:tap="restoreSearch" data-nothing=""/>
+                <image src="images/x.png" bind:tap="restoreSearch" />
             </view>
             <view class="search-cancel" bind:tap="searchTap">取消</view>
         </view>

@@ -62,6 +62,7 @@
     <view>
         <like-cmp bind:like="like" count="{{favor.fav_nums}}" isLike="{{favor.like_status}}" />
         <image src="images/share.png" class="share"/>
+        <button class="share-btn"  open-type="share"/>
     </view>
 </view>
 
@@ -92,5 +93,3 @@
 <view hidden="{{!isInput}}">
     <mask-cmp />
 </view>
-
-<view>books-d</view>

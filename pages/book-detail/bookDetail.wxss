@@ -230,3 +230,12 @@
     height: 28rpx;
     margin-left:60rpx;
 }
+
+.share-btn{
+    width:80rpx;
+    height:80rpx;
+    position:absolute;
+    top:0;
+    right:0;
+    opacity: 0;
+}
